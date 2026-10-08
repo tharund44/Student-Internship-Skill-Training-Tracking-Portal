@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #6D4AFF;
+  --color-primary-light: #8E74FF;
+  --color-primary-dark: #5031E5;
+  --color-lavender: #E6E6FA;
+  --color-glass: rgba(255, 255, 255, 0.15);
+  --color-glass-dark: rgba(255, 255, 255, 0.3);
+  --color-glass-border: rgba(255, 255, 255, 0.4);
+}
+
+@layer base {
+  body {
+    @apply bg-lavender/30 text-gray-900 antialiased min-h-screen relative;
+  }
+}
+
+.glass-panel {
+  @apply backdrop-blur-xl bg-glass border border-glass-border shadow-xl;
+}
+@keyframes sweep {
+  0% { transform: translateX(-150%) skewX(12deg); }
+  100% { transform: translateX(150%) skewX(12deg); }
+}
+.animate-sweep {
+  animation: sweep 1s ease-in-out;
+}
+@keyframes sweep {
+  0% { transform: translateX(-150%) skewX(12deg); }
+  100% { transform: translateX(150%) skewX(12deg); }
+}
+.animate-sweep {
+  animation: sweep 1s ease-in-out;
+}
